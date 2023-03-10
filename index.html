@@ -1,129 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" src="style.css">
-</head>
-<body>
-    <div class="content">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motor Production</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v4.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="content">
         <div class="title">
-            <h1>
-                TOTAL MOTOR PRODUCTION COUNTRY WISE (1986-1989) 
-            </h1>
-            <h2>18CSE301J</h2>
-            <h2>ASSIGNMENT 1</h2>
-            <h2>SHIKHAR AGRAWAL</h2>   
+          <h1>TOTAL MOTOR PRODUCTION COUNTRY WISE (1986-1989)</h1>
+          <h2>18CSE301J</h2>
+          <h2>ASSIGNMENT 1 - TABLEAU REPRESENTATION</h2>
+          <h2>SHIKHAR AGRAWAL</h2>
         </div>
         <div class="main2">
-                <div class="card">
-                    <h1 style="margin: 3%">Brief Description of the Dataset</h1>
-                    <p class="desc"> 
-                        The data represents Motor Productions of 15 countries from 1986-1989 as calculated on 31st December of that year.
-                        <br><br>Done under guidance of Dr. Parthiban Sir for Information Visualisation  - 18CSE301J
-                        
-                    </p> 
-                </div>
+          <div class="card">
+            <h1 style="margin: 3%">Brief Description of the Dataset</h1>
+            <p class="desc">
+              The data represents Motor Productions of 15 countries from
+              1986-1989 as calculated on 31st December of that year.
+              <br /><br />Done under guidance of Dr. Parthiban Sir for
+              Information Visualisation - 18CSE301J
+            </p>
+          </div>
         </div>
         <div class="footer">
-            <p>***This dataset was taken from <a href="https://data.gov.in/resource/countries-wise-selected-total-motor-vehicle-production-1986-89"> Link to Dataset</a></p>
+          <p>
+            ***This dataset was taken from
+            <a
+              href="https://data.gov.in/resource/countries-wise-selected-total-motor-vehicle-production-1986-89"
+            >
+              Link to Dataset</a
+            >
+          </p>
         </div>
         <button class="visualise" onclick="onClick()">Visualise</button>
         <div class="main" id="data">
-            <div class='tableauPlaceholder' id='viz1677572241242' style='position: relative'>
+          <div
+            class="tableauPlaceholder"
+            id="viz1677572241242"
+            style="position: relative"
+          >
             <noscript>
-                <a href='#'>
-                    <img alt='Motor Production ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CountryWiseMotorProduction1986-1989&#47;MotorProduction&#47;1_rss.png' style='border: none' />
-                </a>
+              <a href="#">
+                <img
+                  alt="Motor Production "
+                  src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CountryWiseMotorProduction1986-1989&#47;MotorProduction&#47;1_rss.png"
+                  style="border: none"
+                />
+              </a>
             </noscript>
-            <object class='tableauViz'  style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                <param name='embed_code_version' value='3' /> 
-                <param name='site_root' value='' />
-                <param name='name' value='CountryWiseMotorProduction1986-1989&#47;MotorProduction' />
-                <param name='tabs' value='no' /><param name='toolbar' value='yes' />
-                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CountryWiseMotorProduction1986-1989&#47;MotorProduction&#47;1.png' /> 
-                <param name='animate_transition' value='yes' />
-                <param name='display_static_image' value='yes' />
-                <param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' />
-                <param name='language' value='en-US' />
+            <object class="tableauViz" style="display: none">
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fpublic.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param
+                name="name"
+                value="CountryWiseMotorProduction1986-1989&#47;MotorProduction"
+              />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param
+                name="static_image"
+                value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CountryWiseMotorProduction1986-1989&#47;MotorProduction&#47;1.png"
+              />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
             </object>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
-
-    <style>
-        body {
-    display: block;
-    text-align: center;
- 
-    }   
-    .tableauPlaceholder{
-        margin: auto;
-
-    }
-
-    .main {
-        display: none;
-        color: white;
-    }
-
-    .desc{
-        text-align: center;
-        font-size: 25px;
-        margin: 5%;
-    }
-
-    .list1, li{
-        text-align: left;
-        margin: 2%;
-    }
-
-    .main2{
-        margin: auto;
-        width: 75%;
-    }
-
-    .card{
-        text-align: center;
-        padding: 1% 0;
-        color: black;
-        border-radius: 20px;
-        font-size: 15px;
-    }
-
-    .visualise {
-        margin: 2%;
-        padding: 1% 2%;
-        font-size: 24px;
-        color: white;
-        border-radius: 15px;
-        border: none;
-        background-color: #04AA6D;
-    }
-
-    .visualise:hover {
-        background-color: #015a39;
-    }
-    </style>
-
-    <script type='text/javascript'>                    
-        var divElement = document.getElementById('viz1677572241242');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        vizElement.style.width='1000px';
-        vizElement.style.height='827px';                    
-        var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        
-        function onClick() {
-            document.getElementById("data").style.display = "flex";
-        }
-    </script>
-</body>
+    <hr />
+    <div class="row">
+      <div class="content">
+        <div class="title">
+          <h2>ASSIGNMENT 2 - D3 REPRESENTATION</h2>
+          <div class="col-12 text-center mt-5 align-items-center">
+            <h2>D3 Graph (Motor Produciton Country Wise (1986-1989))</h2>
+          </div>
+          <button class="visualise" onclick="onClick2()">Visualise</button>
+          <center><div id="AllYears"></div></center>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="content">
+        <div class="title">
+          <h2>ASSIGNMENT 3 - PLOTLY REPRESENTATION</h2>
+          <h2>Motor Production Change Comparison</h2>
+          <button class="visualise" onclick="onClick3()">Visualise</button>
+          <center>
+            <div id="Plotly">
+              <iframe
+                width="1000"
+                height="800"
+                frameborder="0"
+                scrolling="no"
+                src="//plotly.com/~Showrockerman/1.embed"
+              ></iframe>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
