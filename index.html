@@ -10,35 +10,71 @@
   </head>
   <body>
     <div class="row">
-      <div class="content">
-        <div class="title">
-          <h1>TOTAL MOTOR PRODUCTION COUNTRY WISE (1986-1989)</h1>
-          <h2>18CSE301J</h2>
-          <h2>ASSIGNMENT 1 - TABLEAU REPRESENTATION</h2>
-          <h2>SHIKHAR AGRAWAL</h2>
-        </div>
-        <div class="main2">
-          <div class="card">
-            <h1 style="margin: 3%">Brief Description of the Dataset</h1>
-            <p class="desc">
-              The data represents Motor Productions of 15 countries from
-              1986-1989 as calculated on 31st December of that year.
-              <br /><br />Done under guidance of Dr. Parthiban Sir for
-              Information Visualisation - 18CSE301J
-            </p>
-          </div>
-        </div>
-        <div class="footer">
-          <p>
-            ***This dataset was taken from
-            <a
-              href="https://data.gov.in/resource/countries-wise-selected-total-motor-vehicle-production-1986-89"
-            >
-              Link to Dataset</a
-            >
+      <div class="navbar">
+        <ul class="items">
+          <button onclick="onClick4()"><li class="item">Home</li></button>
+          <button onclick="onClick()"><li class="item">Years</li></button>
+          <button onclick="onClick2()"><li class="item">D3</li></button>
+          <button onclick="onClick3()"><li class="item">Plotly</li></button>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="home">
+      <div class="title">
+        <h1>TOTAL MOTOR PRODUCTION COUNTRY WISE (1986-1989)</h1>
+        <h2>18CSE301J</h2>
+        <h2>SHIKHAR AGRAWAL</h2>
+      </div>
+      <div class="main2">
+        <div class="card">
+          <h1 style="margin: 3%">Brief Description of the Dataset</h1>
+          <p class="desc">
+            The data represents Motor Productions of 15 countries from
+            1986-1989 as calculated on 31st December of that year.
+            <br /><br />Done under guidance of Dr. Parthiban Sir for
+            Information Visualisation - 18CSE301J
+          </p>
+          <hr/>
+          <h1 style="margin: 3%">What affects Motor Production?</h1>
+          <p class="desc">
+          Motor production, or the manufacturing of motors, can be influenced by several factors. Here are some key aspects that can impact motor production:
+            <ul class="factors">
+              <li class="factor">Demand and market conditions</li> 
+              <li class="factor">Technological advancements</li> 
+              <li class="factor">Supply chain and raw materials</li> 
+              <li class="factor">Manufacturing capacity and efficiency</li> 
+              <li class="factor">Regulations and standards</li>
+            </ul>
+          </p>
+          <hr/>
+          <h1 style="margin: 3%">How does my visualization help analyze the data?</h1>
+          <p class="desc">
+            My visualization project aims to analyze the motor production of vehicles specifically from the years 1986 to 1989. By delving into this specific time frame, we can gain valuable insights into the trends, advancements, and challenges faced by the automotive industry during that period.
+            <br><br>
+            Using historical data and statistical analysis, my visualization will showcase various key metrics related to motor production, such as the total number of vehicles produced, the types of motors utilized, and the distribution of motor types across different vehicle categories.
+            <br><br>
+          By examining the motor production of vehicles from 1986 to 1989, my visualization aims to uncover valuable insights. These insights can help researchers, automotive enthusiasts, and industry professionals better understand the historical context, technological advancements, and production strategies employed during this specific period. Ultimately, the visualization seeks to provide a comprehensive and engaging analysis of motor production in the automotive sector during the late 1980s. 
           </p>
         </div>
-        <button class="visualise" onclick="onClick()">Visualise</button>
+      </div>
+      <div class="footer">
+        <p>
+          ***This dataset was taken from
+          <a
+            href="https://data.gov.in/resource/countries-wise-selected-total-motor-vehicle-production-1986-89"
+          >
+            Link to Dataset</a
+          >
+        </p>
+      </div>
+    </div>
+    <div class="row" id="tableau">
+      <div class="content">
+        <div class="title">
+          <div class="col-12 text-center mt-5 align-items-center">
+            <h2>TABLEAU REPRESENTATION</h2>
+          </div>
+        </div>
         <div class="main" id="data">
           <div
             class="tableauPlaceholder"
@@ -82,26 +118,22 @@
         </div>
       </div>
     </div>
-    <hr />
-    <div class="row">
+    <div class="row" id="d3">
       <div class="content">
         <div class="title">
-          <h2>ASSIGNMENT 2 - D3 REPRESENTATION</h2>
+          <h2>D3 REPRESENTATION</h2>
           <div class="col-12 text-center mt-5 align-items-center">
             <h2>D3 Graph (Motor Produciton Country Wise (1986-1989))</h2>
           </div>
-          <button class="visualise" onclick="onClick2()">Visualise</button>
           <center><div id="AllYears"></div></center>
         </div>
       </div>
     </div>
-    <hr />
-    <div class="row">
+    <div class="row" id="plotly">
       <div class="content">
         <div class="title">
-          <h2>ASSIGNMENT 3 - PLOTLY REPRESENTATION</h2>
+          <h2>PLOTLY REPRESENTATION</h2>
           <h2>Motor Production Change Comparison</h2>
-          <button class="visualise" onclick="onClick3()">Visualise</button>
           <center>
             <div id="Plotly">
               <iframe
@@ -116,7 +148,6 @@
         </div>
       </div>
     </div>
-    <hr />
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

@@ -7,7 +7,6 @@ body {
 }
 
 .main {
-  display: none;
   color: white;
 }
 
@@ -57,10 +56,67 @@ li {
 #AllYears {
   width: 1200px;
   height: 600px;
-  display: none;
 }
 
 #Plotly {
-  display: none;
   justify-content: center;
+}
+
+.row {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background-color: black;
+  z-index: 10;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.item {
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+#d3 {
+  display: none;
+}
+
+#plotly {
+  display: none;
+}
+
+button {
+  background-color: black;
+  padding: 0 2%;
+}
+
+button:hover{
+  background-color: grey;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+}
+
+#tableau {
+  display: none;
+}
+
+/* .factors {
+  display: flex;
+  align-items: cente;
+} */
+
+.factor {
+  font-size: 25px;
 }

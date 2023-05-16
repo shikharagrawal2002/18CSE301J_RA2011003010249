@@ -9,15 +9,31 @@ scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
 vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
 function onClick() {
-  document.getElementById("data").style.display = "flex";
+  document.getElementById("tableau").style.display = "flex";
+  document.getElementById("d3").style.display = "none";
+  document.getElementById("plotly").style.display = "none";
+  document.getElementById("home").style.display="none";
 }
 
 function onClick2() {
-  document.getElementById("AllYears").style.display = "flex";
+  document.getElementById("tableau").style.display = "none";
+  document.getElementById("plotly").style.display = "none";
+  document.getElementById("d3").style.display = "flex";
+  document.getElementById("home").style.display="none";
 }
 
 function onClick3() {
-  document.getElementById("Plotly").style.display = "flex";
+  document.getElementById("tableau").style.display = "none";
+  document.getElementById("plotly").style.display = "flex";
+  document.getElementById("d3").style.display = "none";
+  document.getElementById("home").style.display="none";
+}
+
+function onClick4() {
+  document.getElementById("tableau").style.display = "none";
+  document.getElementById("plotly").style.display = "none";
+  document.getElementById("d3").style.display = "none";
+  document.getElementById("home").style.display="flex";
 }
 
 // Script for D3
